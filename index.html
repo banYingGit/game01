@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1"/>
+    <title>特征搜索测验</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery/jquery-1.8.3.js"></script>
+
+</head>
+<body>
+<div class="srceen1 show" id="screen1">
+    <div class="main-box">
+        <div class="img-box logo"><img src="img/logo.png"/></div>
+        <div class="img-box explain"><img src="img/shouye.png"/></div>
+        <div class="botton"><img src="img/btn_jinruceyan.png" id="start"/></div>
+    </div>
+</div>
+<div class="srceen2" id="screen2">
+    <div class="main-box">
+        <div class="img-box explain explainT"><img src="img/lianxi.png"/></div>
+        <div class="botton"><img src="img/btn_kaishiceyan.png" id="startTest"/></div>
+    </div>
+</div>
+<div class="srceen2" id="screen3">
+
+    <div class="main-box game-deskt">
+
+        <div class="img-box top">
+
+            <ul class="process practice" data-role="process">
+                <li><img src="img/guanqia1.png"/></li>
+                <li><img src="img/guanqia2.png"/></li>
+            </ul>
+
+        </div>
+        <div class="current"><img src="" data-role="textIcon"/></div>
+        <div class="desktop">
+            <ul data-role="putIcon" data-state="test">
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="srceen2" id="screen4">
+    <div class="main-box">
+        <div class="img-box explain explainT"><img src="img/ceyan.png"/></div>
+        <div class="botton"><img src="img/btn_kaishiceyan.png" id="startCheck"/></div>
+    </div>
+</div>
+
+<div class="srceen2" id="screen5">
+    <div class="main-box game-deskt">
+        <div class="img-box top">
+            <div class="time"><span id="time">30</span>秒</div>
+            <ul class="process" data-role="process">
+                <li><img src="img/guanqia1.png"/></li>
+                <li><img src="img/guanqia2.png"/></li>
+                <li><img src="img/guanqia3.png"/></li>
+                <li><img src="img/guanqia4.png"/></li>
+                <li><img src="img/guanqia5.png"/></li>
+                <li><img src="img/guanqia6.png"/></li>
+                <li><img src="img/guanqia7.png"/></li>
+                <li><img src="img/guanqia8.png"/></li>
+                <li><img src="img/guanqia9.png"/></li>
+                <li><img src="img/guanqia10.png"/></li>
+                <li><img src="img/guanqia11.png"/></li>
+                <li><img src="img/guanqia12.png"/></li>
+            </ul>
+            <div class="stop"><img src="img/zanting.png"/></div>
+        </div>
+        <div class="current"><img src="" data-role="textIcon"/></div>
+        <div class="desktop">
+            <ul data-role="putIcon" data-state="check" >
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="srceen1" id="screenStop">
+    <div class="main-box">
+        <div class="img-box logo"><img src="img/logo.png"/></div>
+        <div class="img-box explain"><img src="img/shouye.png"/></div>
+        <div class="botton bottons"><img src="img/btn_tuichu.png" data-role="close" onclick="history.go(-1)"/> <img src="img/btn_jixuceyan.png"
+                                                                                      id="continue"/></div>
+    </div>
+</div>
+<div class="srceen2" id="screen6">
+    <div class="main-box">
+        <div class="img-box explain explainT"><img src="img/over.png"/>
+            <div id="uesTime" class="text  text1"></div>
+            <div id="successNum" class="text  text2"></div>
+            <div id="score" class="text  text3"></div>
+        </div>
+        <div class="botton"><img src="img/btn_tuichu.png" data-role="close" onclick="history.go(-1)"/></div>
+    </div>
+</div>
+<script src="jquery/jquery.game.js"></script>
+</body>
+</html>

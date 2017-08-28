@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #a4f7d3;
+}
+
+.img-box img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    vertical-align: middle
+}
+
+.srceen1, .srceen2 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.show {
+    display: block;
+}
+
+.srceen1 {
+
+    z-index: 5;
+    background: url("../img/bg.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.srceen2 {
+    z-index: 1;
+    background: url("../img/bg2.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-box {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 80%;
+    margin-left: -40%;
+    height: 75%;
+}
+
+.game-deskt {
+    top: 5%;
+    height: 90%;
+}
+
+.logo {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.explain {
+    margin: 5% auto;
+
+    width: 60%;
+
+}
+
+.explainT {
+    position: relative;
+    margin-top: 10%
+}
+
+.explainT .text {
+    position: absolute;
+    right: 35%;
+    width: 50%;
+    height: 20%;
+    font-size: 3em;
+    color: #007321;
+    text-align: right;
+}
+
+.text1 {
+    top: 47%;
+}
+
+.text2 {
+    top: 61%;
+}
+
+.text3 {
+    top: 76%;
+}
+
+.botton {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.botton img {
+    width: 50%;
+    cursor: pointer;
+}
+
+.bottons img {
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+}
+
+.top {
+    position: relative;
+    width: 100%;
+    height: 15%;
+}
+
+.time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 16%;
+    height: 100%;
+    padding-top: 3.2%;
+    background: url("../img/daojishi.png") center no-repeat;
+    background-size: 65% auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #007321;
+    vertical-align: middle;
+}
+
+.time span {
+    font-weight: lighter;
+    font-size: 48px;
+    vertical-align: middle;
+}
+
+.process {
+    position: relative;
+    display: block;
+    top:16%;
+    width: 70%;
+    height: 100px;
+    left: 15px;
+    margin: 0 0 0 18%;
+}
+
+.process:after {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(98% - 30px);
+    height: 2px;
+    background: #007321;
+    content: '';
+}
+
+.process li {
+    position: relative;
+    z-index: 9;
+    display: block;
+    float: left;
+    width: calc(100% / 12);
+    padding: 2% 1% 0 1%;
+    margin: 0 0 0 0;
+}
+
+.process li img {
+    transform: scale(.95);
+}
+
+.process li.big img {
+    transform: scale(1.3);
+}
+
+.process.practice {
+    left: 0;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.process.practice:after {
+    width: 65%;
+}
+
+.process.practice li {
+    width: 33%;
+    padding: 5%;
+    margin-top: 1%;
+}
+
+.process.practice li:nth-last-child(1) {
+    float: right;
+}
+
+.stop {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    display: block;
+    width: 7%;
+    cursor: pointer;
+}
+
+.current {
+    width: 150px;
+    height: 150px;
+    margin: 6% auto;
+    background: url("../img/kuang1.png") center no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    line-height: 140px;
+}
+
+.current img {
+    width: 80%;
+}
+
+.desktop {
+    width: 80%;
+    height: calc(70% - 220px);
+    margin: 0 auto;
+    background: url("../img/kuang2.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.desktop ul {
+    width: 100%;
+    height: 100%
+}
+
+.desktop ul li {
+    position: relative;
+    float: left;
+    width: calc(100% / 6);
+    height: 45%;
+
+    text-align: center;
+}
+
+.desktop ul li:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: url("../img/xuanze.png") center no-repeat;
+    background-size: 90% auto;
+    transition: all .5s;
+    content: '';
+}
+
+.desktop ul li.active:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.desktop ul li.active.error:after {
+    animation: mymove .5s linear infinite alternate;
+    -webkit-animation: mymove .5s linear infinite alternate; /*Safari and Chrome*/
+}
+
+@keyframes mymove {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes mymove {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.btn11 {
+    background: url("../img/btn11.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn12 {
+    background: url("../img/btn12.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn13 {
+    background: url("../img/btn13.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn14 {
+    background: url("../img/btn14.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn21 {
+    background: url("../img/btn21.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn22 {
+    background: url("../img/btn22.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn23 {
+    background: url("../img/btn23.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn24 {
+    background: url("../img/btn24.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn31 {
+    background: url("../img/btn31.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn32 {
+    background: url("../img/btn32.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn33 {
+    background: url("../img/btn33.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn34 {
+    background: url("../img/btn34.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn41 {
+    background: url("../img/btn41.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn42 {
+    background: url("../img/btn42.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn43 {
+    background: url("../img/btn43.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.btn44 {
+    background: url("../img/btn44.png") center no-repeat;
+    background-size: 80% auto;
+}
+
+.desktop ul li img {
+    width: 65%;
+}
